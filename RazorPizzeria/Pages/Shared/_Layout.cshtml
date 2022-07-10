@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SuperBar</title>
+    <link type="image/x-icon" href="/faviconSuperBar.jpg" rel="shortcut icon">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/RazorPizzeria.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <nav class="navbar-expand-sm  navbar-light bg-white menu">
+            <div>
+                <div class="">
+                    <ul class="">
+                        <a class="nav-link text-dark display-10" asp-area="" asp-page="/Index">
+                        <li class="nav-item">
+                            Home
+                        </li>
+                        </a>
+                        <a class="nav-link text-dark display-10" asp-area="" asp-page="/Pizza">
+                        <li class="nav-item">
+                            Menu
+                        </li>
+                        </a>
+                        <a class="nav-link text-dark display-10" asp-area="" asp-page="/Orders">
+                        <li class="nav-item">
+                            Orders
+                        </li>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
